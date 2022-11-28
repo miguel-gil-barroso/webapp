@@ -5,6 +5,8 @@ import os
 # Crear el objeto que representa la aplicacion web
 APP = flask.Flask(__name__)
 
+PORT = os.environ['PORT']
+
 redis_available = os.environ.get('REDIS_AVAILABLE', 'no').lower() == "yes"
 if redis_available:
     redis_host = os.environ['REDIS_HOST']
@@ -25,4 +27,4 @@ def index():
 
 if __name__ == '__main__':
     APP.debug = True
-    APP.run(host='0.0.0.0', port=5000)
+    APP.run(host='0.0.0.0', port=PORT)
