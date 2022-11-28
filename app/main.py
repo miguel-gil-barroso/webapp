@@ -16,7 +16,7 @@ if redis_available:
 @APP.route('/')
 def index():
     userinfo_mock = {
-            'username': 'Óscar',
+            'username': 'Miguel',
             'photo_url': 'https://via.placeholder.com/150'
     }
 
