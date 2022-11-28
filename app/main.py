@@ -26,5 +26,6 @@ def index():
 
 
 if __name__ == '__main__':
+    PORT = os.environ['PORT']
     APP.debug = True
     APP.run(host='0.0.0.0', port=PORT)
